@@ -3,12 +3,7 @@ function show(values) {
 }
 
 function checkForSubset(set1, set2) {
-    let isSubset = true;
-    set1.forEach((value) => { 
-        if (!set2.has(value))
-            isSubset = false;
-        });
-    return isSubset;
+    return [...set1].every(element => set2.has(element));
 }
 
 // a. Create two sets, set1 and set2, each containing three unique elements.
